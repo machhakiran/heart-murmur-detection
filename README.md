@@ -3,8 +3,9 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg)](https://pytorch.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B.svg)](https://streamlit.io/)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model%20Hub-yellow.svg)](https://huggingface.co/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/machhakiran/heart-murmur-detection/blob/main/colab/train_lstm_heart_murmur.ipynb)
 [![Dataset](https://img.shields.io/badge/Kaggle-Heartbeat%20Sound-20BEFF.svg)](https://www.kaggle.com/datasets/abdallahaboelkhair/heartbeat-sound)
+[![GitHub](https://img.shields.io/badge/GitHub-machhakiran%2Fheart--murmur--detection-black.svg?logo=github)](https://github.com/machhakiran/heart-murmur-detection)
 
 An end-to-end medical deep learning system designed for phonocardiogram (PCG) acoustic analysis and preliminary cardiac auscultation. The system processes heartbeat sound recordings, extracts 60 time-frequency acoustic features, and classifies heart sounds into **Normal**, **Heart Murmur**, and **Extrasystole (Arrhythmia)** using a Bidirectional LSTM (BiLSTM) network with temporal attention pooling.
 

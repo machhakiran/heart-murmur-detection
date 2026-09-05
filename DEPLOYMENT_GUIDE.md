@@ -44,66 +44,59 @@ Make sure you are signed into:
 
 ## Step 3: Train & Upload Model using Google Colab
 
-1. Open [Google Colab](https://colab.research.google.com).
-2. Click **File ➔ Upload notebook**, and select the file from this project:
-   ```
-   colab/train_lstm_heart_murmur.ipynb
-   ```
-3. In Colab, switch to GPU runtime:
+1. Open the notebook in Google Colab with **one click**:
+   👉 [**Open `train_lstm_heart_murmur.ipynb` in Google Colab**](https://colab.research.google.com/github/machhakiran/heart-murmur-detection/blob/main/colab/train_lstm_heart_murmur.ipynb)
+   *(Make sure you are logged in as `machhakiran@gmail.com` in your browser).*
+2. In Colab, switch to GPU runtime:
    - Click **Runtime ➔ Change runtime type**.
    - Select **T4 GPU** under Hardware accelerator and click **Save**.
-4. Run **Step 1** (Installs packages: `librosa`, `torch`, `huggingface_hub`, etc.).
-5. Run **Step 2**:
+3. Run **Step 1** (Installs packages: `librosa`, `torch`, `huggingface_hub`, etc.).
+4. Run **Step 2**:
    - A file upload button will appear. Click **Choose Files** and select your `kaggle.json` file.
    - Colab will automatically download and extract the Kaggle dataset (`abdallahaboelkhair/heartbeat-sound`).
-6. Run **Steps 3 through 8**:
+5. Run **Steps 3 through 8**:
    - Automatically pre-processes audio, extracts 60 acoustic features (MFCC, Spectral, Chroma, RMS).
    - Trains the BiLSTM model with attention pooling.
    - Generates the confusion matrix and clinical performance report.
-7. Run **Step 9 (Export to Hugging Face)**:
+6. Run **Step 9 (Export to Hugging Face)**:
    - Paste your **Hugging Face Write Token** when prompted.
    - Enter your model repo name when asked, for example:
      ```
-     your-hf-username/heart-murmur-bilstm
+     machhakiran/heart-murmur-bilstm
      ```
    - The script will automatically push `heart_murmur_lstm.pt`, `config.json`, and `README.md` to your Hugging Face Hub!
-   - Note down your model repo name: `your-hf-username/heart-murmur-bilstm`.
+   - Note down your model repo name: `machhakiran/heart-murmur-bilstm`.
 
 ---
 
-## Step 4: Push the Project to Your GitHub
+## Step 4: Your Project on GitHub
 
-1. Go to [github.com/new](https://github.com/new) and create a new repository:
-   - **Repository name**: `heart-murmur-detection`
-   - **Visibility**: Public (recommended for Streamlit Community Cloud)
-   - Do NOT initialize with README/license (we already have them).
-2. In your local terminal inside this project folder (`/Users/kavi/Documents/3_AI-PoweredHeartMurmurDetection System`):
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete AI heart murmur detection system with BiLSTM and Streamlit"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/heart-murmur-detection.git
-   git push -u origin main
-   ```
+Your repository is already live on your GitHub account (`machhakiran`):
+👉 **[https://github.com/machhakiran/heart-murmur-detection](https://github.com/machhakiran/heart-murmur-detection)**
+
+If you make any new local edits later, simply run:
+```bash
+git add .
+git commit -m "update: improvements"
+git push origin main
+```
 
 ---
 
 ## Step 5: Deploy on Streamlit Community Cloud
 
-1. Go to [share.streamlit.io](https://share.streamlit.io) and log in with your GitHub account.
+1. Go to [share.streamlit.io](https://share.streamlit.io) in Chrome (sign in using your GitHub account `machhakiran` / `machhakiran@gmail.com`).
 2. Click **New app** (or **Create app**).
 3. Fill in the deployment form:
-   - **Repository**: `<YOUR_GITHUB_USERNAME>/heart-murmur-detection`
+   - **Repository**: `machhakiran/heart-murmur-detection`
    - **Branch**: `main`
    - **Main file path**: `app.py`
    - **App URL**: choose your preferred subdomain (e.g., `cardio-murmur-ai.streamlit.app`)
 4. Click **Advanced settings...**:
    - In the **Secrets** box, paste:
      ```toml
-     HF_MODEL_REPO = "your-hf-username/heart-murmur-bilstm"
+     HF_MODEL_REPO = "machhakiran/heart-murmur-bilstm"
      ```
-   *(Replace with your actual Hugging Face model repository ID from Step 3).*
 5. Click **Deploy!**
 
 ---

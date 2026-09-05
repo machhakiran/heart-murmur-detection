@@ -57,7 +57,7 @@ class SystemConfig:
     })
     
     # Hugging Face Model Hub defaults
-    default_hf_repo: str = "kavi/heart-murmur-bilstm"
+    default_hf_repo: str = "machhakiran/heart-murmur-bilstm"
     model_filename: str = "heart_murmur_lstm.pt"
     config_filename: str = "config.json"
 
