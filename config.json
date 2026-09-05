@@ -1,0 +1,11 @@
+{
+  "model_type": "HeartMurmurLSTM",
+  "classes": [
+    "Normal",
+    "Murmur",
+    "Extrasystole"
+  ],
+  "sample_rate": 4000,
+  "duration_seconds": 5.0,
+  "feature_dimension": 60
+}
