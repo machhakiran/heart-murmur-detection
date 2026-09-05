@@ -42,3 +42,4 @@ ENV/
 data/
 *.zip
 *.tar.gz
+kaggle_kernel/
