@@ -1,0 +1,10 @@
+# AI-Powered Heart Murmur Detection System Dependencies
+streamlit>=1.30.0
+torch>=2.0.0
+librosa>=0.10.1
+soundfile>=0.12.1
+numpy>=1.24.0,<2.0.0
+scipy>=1.11.0
+matplotlib>=3.8.0
+huggingface_hub>=0.20.0
+pandas>=2.0.0
